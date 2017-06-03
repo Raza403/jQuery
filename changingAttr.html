@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery 3</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        #circle {
+            height: 150px;
+            width: 150px;
+            background-color: green;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <p>This is some text.</p>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dPtFkxFtq-0" frameborder="0" allowfullscreen></iframe>
+    </p>
+    <script type="text/javascript">
+        //Selecting id circle and changing it using function.
+        $("#circle").click(function () {
+            //Changing inner html of "P"
+            $("p").html("This text has changed");
+            //alerting inner html of p, or contects of p
+            alert($("p").html());
+
+        })
+        $("#circle").hover(function () {
+            $("iframe").attr("src", "https://www.ecowebhosting.co.uk");
+        })
+    </script>
+</body>
+
+</html>

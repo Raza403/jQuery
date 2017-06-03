@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1st jQuery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        #circle {
+            height: 150px;
+            width: 150px;
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        .square {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+    <script type="text/javascript">
+        $("#circle").click(function () {
+            alert("circle was clicked")
+        })
+        $(".square").click(function () {
+            alert("square was clicked")
+        })
+        $("div").click(function () {
+            alert("Div was clicked")
+        })
+    </script>
+</body>
+
+</html>
