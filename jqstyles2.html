@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changing styles using jQuery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        #fin {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="fout">This para graph is to fadeout!</p>
+    <p id="fin">This text is to be shown</p>
+    <button id="foutb">Fade out!</button>
+    <button id="bfin">Fade In!</button>
+    <script>
+        $("#foutb").click(function () {
+
+            $("#fout").fadeOut("slow");
+
+        });
+        $("#bfin").click(function () {
+
+            $("#fin").fadeIn("slow");
+
+        });
+    </script>
+</body>
+
+</html>
