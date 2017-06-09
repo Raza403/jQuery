@@ -11,7 +11,17 @@
     <title>jquery-ui</title>
     <script>
         $(function () {
-            $("#resize").resizable();
+            $("#resize").resizable({
+                alsoResize: "#also",
+                grid:50, 
+                resize: function( event, ui ) {
+                if( $("#resize").width() > 300){
+                    alert("Big Enough!");
+                }
+                
+                }
+            });
+            $("#also").resizable();
         });
     </script>
     <style>
@@ -20,12 +30,21 @@
             height: 400px;
             background-color: green;
         }
+
+        #also {
+            height: 400px;
+            width: 300px;
+            background-color: red;
+        }
     </style>
 </head>
 
 <body>
     <div id="resize">
         I am a resizeable div!
+    </div>
+    <div id="also">
+        I am also resized!
     </div>
 
 </body>

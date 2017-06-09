@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="jq-ui/jquery-ui.js"></script>
+    <link href="jq-ui/jquery-ui.css" rel="stylesheet">
+    <title>Dropabble</title>
+    <style>
+        #big {
+            height: 300px;
+            width: 280px;
+            background-color: green;
+        }
+
+        #small {
+            height: 200px;
+            width: 140px;
+            background-color: yellow;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big">
+        <p>Drop here!</p>
+    </div>
+    <div id="small">
+        <p>Drag me to the target!</p>
+    </div>
+
+    <script type="text/javascript">
+        $("#small").draggable();
+        $("#big").droppable({
+            drop: function (event, ui) {
+                alert("Dropped!")
+            }
+        });
+    </script>
+</body>
+
+</html>
